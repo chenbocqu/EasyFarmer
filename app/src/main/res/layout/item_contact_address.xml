@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg_roundcorner"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_name_phone"
+            style="@style/MyText.Large.Black"
+            android:text="名字 电话" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/MyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="省市区 详细地址" />
+
+        <LinearLayout
+            android:id="@+id/llMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/menuMargin"
+            android:gravity="right|bottom">
+
+            <LinearLayout
+                android:id="@+id/ll_farm_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical"
+                android:padding="@dimen/textPadding">
+
+                <ImageView
+                    style="@style/IconSmall"
+                    android:src="@drawable/detial_info" />
+
+                <TextView
+                    style="@style/MyText"
+                    android:layout_marginLeft="5dp"
+                    android:text="详情" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical"
+                android:padding="@dimen/textPadding">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    style="@style/IconSmall"
+                    android:src="@drawable/edit" />
+
+                <TextView
+                    style="@style/MyText"
+                    android:layout_marginLeft="5dp"
+                    android:text="编辑" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selector"
+                android:gravity="center_vertical"
+                android:padding="@dimen/textPadding">
+
+                <ImageView
+                    style="@style/IconSmall"
+                    android:src="@drawable/del" />
+
+                <TextView
+                    style="@style/MyText"
+                    android:layout_marginLeft="5dp"
+                    android:text="删除" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

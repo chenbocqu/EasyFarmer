@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--调整高度为1/4-->
+                <LinearLayout
+                    style="@style/MenuGroupWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="108dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_normal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_express_take"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_selected"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/express" />
+
+                        <TextView
+                            style="@style/MyText.Small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="取快递" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_express_send"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/itemMargin"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_unselected"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/express_send" />
+
+                        <TextView
+                            style="@style/MyText.Small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="寄快递" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_return"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/itemMargin"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_unselected"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/give_back" />
+
+                        <TextView
+                            style="@style/MyText.Small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="还书" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_other_task"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/itemMargin"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_unselected"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_small">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/other_task" />
+
+                        <TextView
+                            android:id="@+id/tv_other"
+                            style="@style/MyText.Small"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="其他" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/MenuGroupWrapper">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_from"
+                        style="@style/MenuWrapper">
+
+                        <ImageView
+                            android:id="@+id/iv_take_info"
+                            style="@style/Icon"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:src="@drawable/start_point" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_takeinfo_arrow"
+                            style="@style/ArrowRight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/iv_takeinfo_arrow"
+                            android:layout_toRightOf="@id/iv_take_info"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_start_loc"
+                                style="@style/MyText.Large.Black"
+                                android:text="从哪里开始？" />
+
+                            <TextView
+                                android:id="@+id/tv_start_time"
+                                style="@style/MyText"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:gravity="center|left"
+                                android:lines="2"
+                                android:text="留下一个出发时间吧" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <View style="@style/SplitLine.WithMargin" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_to"
+                        style="@style/MenuWrapper">
+
+                        <ImageView
+                            android:id="@+id/iv_dest"
+                            style="@style/Icon"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:src="@drawable/end_point" />
+
+                        <ImageView
+                            android:id="@+id/iv_dest_arrow"
+                            style="@style/ArrowRight" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/iv_dest_arrow"
+                            android:layout_toRightOf="@id/iv_dest"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_to_loc"
+                                style="@style/MyText.Large.Black"
+                                android:text="要到哪里去？" />
+
+                            <TextView
+                                android:id="@+id/tv_to_time"
+                                style="@style/MyText"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:gravity="center|left"
+                                android:lines="2"
+                                android:text="预计几点会到目的地" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mark"
+                    style="@style/MenuWrapper"
+                    android:layout_marginTop="@dimen/menuMargin">
+
+                    <ImageView
+                        android:id="@+id/iv_mark_info"
+                        style="@style/Icon"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/mark" />
+
+                    <ImageView
+                        android:id="@+id/iv_mark_arrow"
+                        style="@style/ArrowRight" />
+
+                    <RelativeLayout
+                        style="@style/MyText"
+                        android:layout_height="85dp"
+                        android:layout_toLeftOf="@id/iv_mark_arrow"
+                        android:layout_toRightOf="@id/iv_mark_info">
+
+                        <EditText
+                            android:id="@+id/edt_mark"
+                            style="@style/MyText"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/item_unselected"
+                            android:ellipsize="end"
+                            android:gravity="top"
+                            android:hint="有什么需要备注的吗？"
+                            android:lines="3"
+                            android:padding="5dp" />
+
+                        <TextView
+                            android:id="@+id/tv_cnt"
+                            style="@style/MyText.Small"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="false"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="0/50" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_publish"
+                    style="@style/MyText.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/roundbtn_bg"
+                    android:text="立即发布"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

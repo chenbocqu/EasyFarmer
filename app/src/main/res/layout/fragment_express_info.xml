@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            style="@style/Icon.Small"
+            android:src="@drawable/myexpress" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyText.Small"
+                android:text="我的快递" />
+
+            <TextView
+                style="@style/MyText.Small"
+                android:layout_marginTop="3dp"
+                android:text="05-12 下午1:01" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            style="@style/MyImg"
+            android:src="@drawable/img_holder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyText.Large.Black"
+                android:text="已签收" />
+
+
+            <TextView
+                style="@style/MyText.Large.Black"
+                android:layout_marginTop="4dp"
+                android:text="海澜之家春季男装" />
+
+            <TextView
+                style="@style/MyText.Small"
+                android:layout_marginTop="3dp"
+                android:text="其他物流：6036157768088" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <include layout="@layout/take_exp_info" />
+
+    <include layout="@layout/take_exp_items" />
+
+    <Button
+        android:id="@+id/btn_take_exp"
+        style="@style/MyText.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/roundbtn_bg"
+        android:text="立即发布"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:se="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bgimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/head_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_trans" />
+
+    <TextView
+        android:id="@+id/tv_ipmodify"
+        style="@style/MyText.Large"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:text="IP配置"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/bg_trans" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/Icon.40dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:src="@drawable/cancel"
+        android:tint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_headimg"
+                style="@style/Icon.Large"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/headpic_default"
+                se:civ_border_color="@color/bg_gray"
+                se:civ_border_overlay="false"
+                se:civ_border_width="2dp"
+                se:civ_fill_color="@color/bg_gray" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/Menu_Icon"
+                android:src="@drawable/username"
+                android:tint="@color/white" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                style="@style/MyText"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <LinearLayout style="@style/Icon.40dp">
+
+                <ImageView
+                    android:id="@+id/iv_del_username"
+                    style="@style/Icon.40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/delete"
+                    android:tint="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/Menu_Icon"
+                android:src="@drawable/password"
+                android:tint="@color/white" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                style="@style/MyText"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:hint="请输入账户密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+            <LinearLayout style="@style/Icon.40dp">
+
+                <ImageView
+                    android:id="@+id/iv_del_password"
+                    style="@style/Icon.40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/delete"
+                    android:tint="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/MyText"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_btn"
+            android:text="登录"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/MyText"
+                android:layout_width="160dp"
+                android:background="@drawable/round_btn_left_bg"
+                android:text="注册新账号" />
+
+            <Button
+                android:id="@+id/btn_resetpwd"
+                style="@style/MyText"
+                android:layout_width="160dp"
+                android:background="@drawable/round_btn_right_bg"
+                android:text="忘记密码" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

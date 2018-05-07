@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/MenuGroupWrapper">
+
+        <RelativeLayout
+            android:id="@+id/rl_take_msg"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_take_msg"
+                style="@style/Icon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/take_msg" />
+
+
+            <ImageView
+                android:id="@+id/iv_takemsg_arrow"
+                style="@style/ArrowRight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_takemsg_arrow"
+                android:layout_toRightOf="@id/iv_take_msg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_msg_title"
+                    style="@style/MyText.Large.Black"
+                    android:text="您的手机信息？" />
+
+                <TextView
+                    android:id="@+id/tv_msg_content"
+                    style="@style/MyText"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:lines="2"
+                    android:text="选择要取件的快递消息（用于取件）" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View style="@style/SplitLine.WithMargin" />
+
+        <RelativeLayout
+            android:id="@+id/rl_receive_address"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_dest"
+                style="@style/Icon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/dest" />
+
+            <ImageView
+                android:id="@+id/iv_dest_arrow"
+                style="@style/ArrowRight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_dest_arrow"
+                android:layout_toRightOf="@id/iv_dest"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_receive_name_phone"
+                    style="@style/MyText.Large.Black"
+                    android:text="您想寄到哪里？" />
+
+                <TextView
+                    android:id="@+id/tv_receive_address"
+                    style="@style/MyText"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:lines="2"
+                    android:text="请填写详细地址，方便小学递送货上门" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

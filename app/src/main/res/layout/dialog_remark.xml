@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_dialog"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_remark"
+            style="@style/MyText.Large.Black"
+            android:gravity="left"
+            android:text="备注" />
+
+        <TextView
+            android:id="@+id/tv_lenth"
+            style="@style/MyText"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_remark"
+            android:text="(0/20)" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            style="@style/Icon.40dp"
+            android:layout_alignParentRight="true"
+            android:padding="6dp"
+            android:src="@drawable/cancel" />
+    </RelativeLayout>
+
+    <View
+        style="@style/SplitLine"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        style="@style/MyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:hint="请备注小学递需要注意的地方！"
+        android:lines="1"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_A"
+            style="@style/ChooseItem"
+            android:text="体积大" />
+
+        <TextView
+            android:id="@+id/tv_B"
+            style="@style/ChooseItem"
+            android:text="要爬楼" />
+
+        <TextView
+            android:id="@+id/tv_C"
+            style="@style/ChooseItem"
+            android:text="易碎品" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_D"
+            style="@style/ChooseItem"
+            android:text="不要打电话" />
+
+        <TextView
+            android:id="@+id/tv_E"
+            style="@style/ChooseItem"
+            android:text="速度要快" />
+
+        <TextView
+            android:id="@+id/tv_F"
+            style="@style/ChooseItem"
+            android:text="姿势要帅" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/roundbtn_bg"
+        android:padding="12dp"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+</LinearLayout>

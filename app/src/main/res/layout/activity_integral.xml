@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_huge">
+
+        <ImageView
+            android:id="@+id/iv_welcome"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/mycoupon" />
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/MyText.Large"
+            android:layout_below="@id/iv_welcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="我的积分"
+            android:textColor="#888" />
+
+        <TextView
+            android:id="@+id/tv_integral"
+            style="@style/MyText"
+            android:layout_below="@id/tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="0"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_huge" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_sign"
+        style="@style/RoundBtn"
+        android:layout_margin="@dimen/margin_huge"
+        android:text="签到" />
+
+</LinearLayout>

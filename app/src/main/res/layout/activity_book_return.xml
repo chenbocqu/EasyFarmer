@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_contact_info"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_take_msg"
+            style="@style/Icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/take_msg" />
+
+
+        <ImageView
+            android:id="@+id/iv_takemsg_arrow"
+            style="@style/ArrowRight" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_takemsg_arrow"
+            android:layout_toRightOf="@id/iv_take_msg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_msg_title"
+                style="@style/MyText.Large.Black"
+                android:text="您的联系方式？" />
+
+            <TextView
+                android:id="@+id/tv_msg_content"
+                style="@style/MyText"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:lines="2"
+                android:text="为了方便小学递找到您，请提供联系方式" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout style="@style/MenuGroupWrapper">
+
+        <RelativeLayout
+            android:id="@+id/rl_take_info"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_take_info"
+                style="@style/Icon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/take_info" />
+
+
+            <ImageView
+                android:id="@+id/iv_takeinfo_arrow"
+                style="@style/ArrowRight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_takeinfo_arrow"
+                android:layout_toRightOf="@id/iv_take_info"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_info_title"
+                    style="@style/MyText.Large.Black"
+                    android:text="到哪里拿书？" />
+
+                <TextView
+                    android:id="@+id/tv_info_content"
+                    style="@style/MyText"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:lines="2"
+                    android:text="和小学递约好见面时间吧" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View style="@style/SplitLine.WithMargin" />
+
+        <RelativeLayout
+            android:id="@+id/rl_receive_address"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_dest"
+                style="@style/Icon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/return_info" />
+
+            <ImageView
+                android:id="@+id/iv_dest_arrow"
+                style="@style/ArrowRight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_dest_arrow"
+                android:layout_toRightOf="@id/iv_dest"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_receive_name_phone"
+                    style="@style/MyText.Large.Black"
+                    android:text="书还到哪里？" />
+
+                <TextView
+                    android:id="@+id/tv_receive_address"
+                    style="@style/MyText"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:lines="2"
+                    android:text="请备注还书地址" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_remark"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_help"
+            style="@style/Menu_Icon.Left"
+            android:src="@drawable/message" />
+
+        <TextView
+            android:id="@+id/tv_beizhu"
+            style="@style/MenuText"
+            android:layout_toRightOf="@id/iv_help"
+            android:text="备注" />
+
+        <ImageView
+            android:id="@+id/iv_help_arrow"
+            style="@style/ArrowRight" />
+
+        <TextView
+            android:id="@+id/tv_remark"
+            style="@style/MyText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_help_arrow"
+            android:layout_toRightOf="@id/tv_beizhu"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:hint="小学递需要注意哪些呢？"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_price"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_price"
+            style="@style/Menu_Icon.Left"
+            android:src="@drawable/money" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            style="@style/MenuText"
+            android:layout_toRightOf="@id/iv_price"
+            android:text="赏金" />
+
+        <ImageView
+            android:id="@+id/iv_price_arrow"
+            style="@style/ArrowRight" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/MyText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_price_arrow"
+            android:gravity="right"
+            android:text="3元"
+            android:textColor="@color/yellow"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_publish"
+        style="@style/MyText.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/roundbtn_bg"
+        android:text="立即发布"
+        android:textColor="@color/white" />
+
+</LinearLayout>

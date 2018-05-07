@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_name"
+            style="@style/MyText"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:hint="姓名"
+            android:maxLines="1" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/bg_gray" />
+
+        <EditText
+            android:id="@+id/edt_phone"
+            style="@style/MyText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="电话"
+            android:inputType="phone"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            style="@style/Icon.35dp"
+            android:padding="7dp"
+            android:src="@drawable/phone" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/MenuGroupWrapper">
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/MyText"
+            android:layout_width="match_parent"
+            android:hint="选择省市区"
+            android:maxLines="1"
+            android:padding="20dp" />
+
+        <View style="@style/SplitLine.WithMargin" />
+
+        <EditText
+            android:id="@+id/edt_detial_address"
+            style="@style/MyText"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:hint="详细地址"
+            android:maxLines="2" />
+    </LinearLayout>
+
+</LinearLayout>

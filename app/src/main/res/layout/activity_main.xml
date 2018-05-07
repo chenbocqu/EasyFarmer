@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stuexpress="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 底部tab -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal">
+
+        <com.cqu.expstuer.view.IndicatorIcon
+            android:id="@+id/id_indicator_one"
+            style="@style/TabIndicator"
+            stuexpress:bottom_color="@color/main_color"
+            stuexpress:bottom_icon="@drawable/tab_home_page"
+            stuexpress:bottom_text="首页"
+            stuexpress:bottom_text_size="12sp" />
+
+        <com.cqu.expstuer.view.IndicatorIcon
+            android:id="@+id/id_indicator_two"
+            style="@style/TabIndicator"
+            stuexpress:bottom_color="@color/main_color"
+            stuexpress:bottom_icon="@drawable/tab_nearstu"
+            stuexpress:bottom_text="附近"
+            stuexpress:bottom_text_size="12sp" />
+
+        <com.cqu.expstuer.view.IndicatorIcon
+            android:id="@+id/id_indicator_three"
+            style="@style/TabIndicator"
+            stuexpress:bottom_color="@color/main_color"
+            stuexpress:bottom_icon="@drawable/tab_parcel"
+            stuexpress:bottom_text="包裹"
+            stuexpress:bottom_text_size="12sp" />
+
+        <com.cqu.expstuer.view.IndicatorIcon
+            android:id="@+id/id_indicator_four"
+            style="@style/TabIndicator"
+            stuexpress:bottom_color="@color/main_color"
+            stuexpress:bottom_icon="@drawable/tab_mine"
+            stuexpress:bottom_text="我的"
+            stuexpress:bottom_text_size="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

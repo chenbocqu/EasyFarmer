@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_myinfo"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_myinfo"
+            style="@style/Menu_Icon.Left"
+            android:src="@drawable/userinfo" />
+
+        <TextView
+            style="@style/MenuText"
+            android:layout_toRightOf="@id/iv_myinfo"
+            android:text="我的信息" />
+
+        <ImageView style="@style/ArrowRight" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_manage_address"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_manage_address"
+            style="@style/Menu_Icon.Left"
+            android:src="@drawable/address" />
+
+        <TextView
+            android:id="@+id/tv_manage_address"
+            style="@style/MenuText"
+            android:layout_toRightOf="@id/iv_manage_address"
+            android:text="管理收货地址" />
+
+        <ImageView style="@style/ArrowRight" />
+
+    </RelativeLayout>
+
+    <LinearLayout style="@style/MenuGroupWrapper">
+
+        <RelativeLayout
+            android:id="@+id/rl_balance"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_balance"
+                style="@style/Menu_Icon.Left"
+                android:src="@drawable/balance" />
+
+            <ImageView
+                android:id="@+id/iv_balance_arrow"
+                style="@style/ArrowRight" />
+
+            <TextView
+                style="@style/MenuText"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_balance"
+                android:text="余额" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                style="@style/MyText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_balance_arrow"
+                android:gravity="right"
+                android:text="¥3"
+                android:textColor="@color/yellow"
+                android:textSize="23sp" />
+
+        </RelativeLayout>
+
+        <View style="@style/SplitLine.WithMargin" />
+
+        <RelativeLayout
+            android:id="@+id/rl_integral"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_integral"
+                style="@style/Menu_Icon.Left"
+                android:src="@drawable/integral" />
+
+            <ImageView
+                android:id="@+id/iv_integral_arrow"
+                style="@style/ArrowRight" />
+
+            <TextView
+                style="@style/MenuText"
+                android:layout_toRightOf="@id/iv_integral"
+                android:text="积分" />
+
+            <TextView
+                android:id="@+id/tv_integral"
+                style="@style/MyText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_integral_arrow"
+                android:gravity="right"
+                android:text="15"
+                android:textColor="@color/red"
+                android:textSize="23sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_join"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_help"
+            style="@style/Menu_Icon.Left"
+            android:src="@drawable/join_in" />
+
+        <TextView
+            android:id="@+id/tv_beizhu"
+            style="@style/MenuText"
+            android:layout_toRightOf="@id/iv_help"
+            android:text="成为小学递" />
+
+        <ImageView
+            android:id="@+id/iv_help_arrow"
+            style="@style/ArrowRight" />
+
+        <TextView
+            android:id="@+id/tv_remark"
+            style="@style/MyText.Small"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_help_arrow"
+            android:layout_toRightOf="@id/tv_beizhu"
+            android:gravity="right"
+            android:hint="加入小学递，变身高富帅！"
+            android:text=""
+            android:textColor="@color/text_gray" />
+
+    </RelativeLayout>
+
+    <LinearLayout style="@style/MenuGroupWrapper">
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                style="@style/Menu_Icon.Left"
+                android:src="@drawable/setting" />
+
+            <ImageView style="@style/ArrowRight" />
+
+            <TextView
+                style="@style/MenuText"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_setting"
+                android:text="设置" />
+
+        </RelativeLayout>
+
+        <View style="@style/SplitLine.WithMargin" />
+
+        <RelativeLayout
+            android:id="@+id/rl_logout"
+            style="@style/MenuWrapper">
+
+            <ImageView
+                android:id="@+id/iv_logout"
+                style="@style/Menu_Icon.Left"
+                android:src="@drawable/logout" />
+
+            <ImageView
+                android:id="@+id/iv_logout_arrow"
+                style="@style/ArrowRight" />
+
+            <TextView
+                style="@style/MenuText"
+                android:layout_toRightOf="@id/iv_logout"
+                android:text="注销" />
+
+            <TextView
+                style="@style/MyText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_logout_arrow"
+                android:gravity="right"
+                android:hint="退出当前账号"
+                android:text=""
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

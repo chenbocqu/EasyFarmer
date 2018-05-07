@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <TextView
+        style="@style/MyText"
+        android:padding="@dimen/text_padding"
+        android:text="任务描述" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:lines="4"
+        android:maxLines="4"
+        android:padding="@dimen/text_padding" />
+
+    <TextView
+        style="@style/MyText"
+        android:padding="@dimen/text_padding"
+        android:text="图片（选填，提供需求或任务截图）" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.lwkandroid.widget.ninegridview.NineGridView
+            android:id="@+id/ngiv"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" />
+
+        <com.lwkandroid.widget.ninegridview.NineGridImageView
+            android:layout_width="match_parent"
+            android:layout_height="240dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_price"
+        style="@style/MenuWrapper"
+        android:layout_marginTop="@dimen/menuMargin">
+
+        <ImageView
+            android:id="@+id/iv_price"
+            style="@style/Menu_Icon.Left"
+            android:src="@drawable/money" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            style="@style/MenuText"
+            android:layout_toRightOf="@id/iv_price"
+            android:text="赏金" />
+
+        <ImageView
+            android:id="@+id/iv_price_arrow"
+            style="@style/ArrowRight" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/MyText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_price_arrow"
+            android:gravity="right"
+            android:text="3元"
+            android:textColor="@color/yellow"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+</LinearLayout>
